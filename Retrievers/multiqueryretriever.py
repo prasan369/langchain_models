@@ -4,10 +4,15 @@ from langchain_core.documents import Document
 from langchain_classic.retrievers.multi_query import MultiQueryRetriever
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
-llm=ChatGroq(model="openai/gpt-oss-120b")
+# ✅ FIXED MODEL
+llm = ChatGroq(
+    model="openai/gpt-oss-120b",
+)
+
 docs = [
     Document(page_content="AI is used in healthcare for diagnosis."),
     Document(page_content="Machine learning improves predictions using data."),
