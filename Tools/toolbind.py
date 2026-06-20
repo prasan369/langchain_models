@@ -16,5 +16,6 @@ llm = ChatGroq(
 
 llm_with_tools = llm.bind_tools([add])
 
-response = llm_with_tools.invoke("What is 5 + 3?")
+
+response = llm_with_tools.invoke("add 3 and 10")
 print(response)
